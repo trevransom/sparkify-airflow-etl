@@ -3,3 +3,7 @@ env
 __pycache__/
 data/
 *.cfg
+airflow.db
+airflow_vars.json
+project-template.zip
+logs/

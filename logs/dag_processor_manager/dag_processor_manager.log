@@ -11866,3 +11866,87 @@ File Path                                                                       
 [2021-02-05 17:04:22,742] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 14:59:22.742873+00:00
 [2021-02-05 17:04:32,776] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
 [2021-02-05 17:04:32,777] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 14:59:32.777684+00:00
+[2021-02-05 17:04:42,822] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:04:42,823] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 14:59:42.823271+00:00
+[2021-02-05 17:04:45,834] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  1.00s           2021-02-05T15:04:45
+================================================================================
+[2021-02-05 17:04:52,862] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:04:52,863] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 14:59:52.863500+00:00
+[2021-02-05 17:05:02,895] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:02,897] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:02.896937+00:00
+[2021-02-05 17:05:12,929] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:12,930] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:12.930444+00:00
+[2021-02-05 17:05:15,937] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  1.00s           2021-02-05T15:05:15
+================================================================================
+[2021-02-05 17:05:22,974] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:22,975] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:22.975288+00:00
+[2021-02-05 17:05:33,024] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:33,025] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:33.025375+00:00
+[2021-02-05 17:05:43,067] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:43,068] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:43.068448+00:00
+[2021-02-05 17:05:46,009] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  0.93s           2021-02-05T15:05:46
+================================================================================
+[2021-02-05 17:05:53,110] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:05:53,110] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:00:53.110642+00:00
+[2021-02-05 17:06:03,153] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:03,153] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:03.153658+00:00
+[2021-02-05 17:06:13,198] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:13,199] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:13.199440+00:00
+[2021-02-05 17:06:16,148] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  0.94s           2021-02-05T15:06:16
+================================================================================
+[2021-02-05 17:06:23,240] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:23,241] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:23.241099+00:00
+[2021-02-05 17:06:33,288] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:33,289] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:33.289388+00:00
+[2021-02-05 17:06:43,335] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:43,341] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:43.341676+00:00
+[2021-02-05 17:06:46,277] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  0.93s           2021-02-05T15:06:46
+================================================================================
+[2021-02-05 17:06:53,382] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:06:53,383] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:01:53.383567+00:00
+[2021-02-05 17:07:03,426] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:07:03,427] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:02:03.427319+00:00
+[2021-02-05 17:07:13,469] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:07:13,471] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:02:13.471800+00:00
+[2021-02-05 17:07:16,404] {dag_processing.py:1064} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/dags/udac_example_dag.py                           0           0  0.93s           2021-02-05T15:07:16
+================================================================================
+[2021-02-05 17:07:23,508] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:07:23,509] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:02:23.509128+00:00
+[2021-02-05 17:07:33,543] {dag_processing.py:1312} INFO - Finding 'running' jobs without a recent heartbeat
+[2021-02-05 17:07:33,544] {dag_processing.py:1316} INFO - Failing jobs without heartbeat after 2021-02-05 15:02:33.544720+00:00
