@@ -1,0 +1,14 @@
+[2021-02-04 14:16:57,868] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Stage_songs 2019-01-12T03:00:00+00:00 [queued]>
+[2021-02-04 14:16:57,875] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Stage_songs 2019-01-12T03:00:00+00:00 [queued]>
+[2021-02-04 14:16:57,875] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-04 14:16:57,875] {taskinstance.py:881} INFO - Starting attempt 3 of 4
+[2021-02-04 14:16:57,875] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-04 14:16:57,878] {taskinstance.py:901} INFO - Executing <Task(StageToRedshiftOperator): Stage_songs> on 2019-01-12T03:00:00+00:00
+[2021-02-04 14:16:57,882] {standard_task_runner.py:54} INFO - Started process 50514 to run task
+[2021-02-04 14:16:57,914] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'udac_example_dag', 'Stage_songs', '2019-01-12T03:00:00+00:00', '--job_id', '114', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/udac_example_dag.py', '--cfg_path', '/var/folders/ys/hb038j3904j77l4dkb4zk2ym0000gq/T/tmppfamzynz']
+[2021-02-04 14:16:57,915] {standard_task_runner.py:78} INFO - Job 114: Subtask Stage_songs
+[2021-02-04 14:16:57,937] {logging_mixin.py:112} INFO - Running <TaskInstance: udac_example_dag.Stage_songs 2019-01-12T03:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-02-04 14:16:57,949] {stage_redshift.py:56} INFO - StageToRedshiftOperator not implemented yet
+[2021-02-04 14:17:02,891] {local_task_job.py:102} INFO - Task exited with return code Negsignal.SIGABRT

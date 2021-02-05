@@ -1,0 +1,30 @@
+[2021-02-04 15:08:28,181] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Stage_events 2019-01-13T15:00:00+00:00 [queued]>
+[2021-02-04 15:08:28,187] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Stage_events 2019-01-13T15:00:00+00:00 [queued]>
+[2021-02-04 15:08:28,188] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-04 15:08:28,188] {taskinstance.py:881} INFO - Starting attempt 4 of 4
+[2021-02-04 15:08:28,188] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2021-02-04 15:08:28,192] {taskinstance.py:901} INFO - Executing <Task(StageToRedshiftOperator): Stage_events> on 2019-01-13T15:00:00+00:00
+[2021-02-04 15:08:28,198] {standard_task_runner.py:54} INFO - Started process 86853 to run task
+[2021-02-04 15:08:28,233] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'udac_example_dag', 'Stage_events', '2019-01-13T15:00:00+00:00', '--job_id', '379', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/udac_example_dag.py', '--cfg_path', '/var/folders/ys/hb038j3904j77l4dkb4zk2ym0000gq/T/tmp81euu5hs']
+[2021-02-04 15:08:28,234] {standard_task_runner.py:78} INFO - Job 379: Subtask Stage_events
+[2021-02-04 15:08:28,257] {logging_mixin.py:112} INFO - Running <TaskInstance: udac_example_dag.Stage_events 2019-01-13T15:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-02-04 15:08:28,328] {stage_redshift.py:53} INFO - Clearing data from destination Redshift table: staging_events
+[2021-02-04 15:08:28,331] {base_hook.py:89} INFO - Using connection to: id: redshift. Host: redshift-cluster-airflow.ca3iipyjqhur.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: None
+[2021-02-04 15:08:28,332] {taskinstance.py:1150} ERROR - could not translate host name "redshift-cluster-airflow.ca3iipyjqhur.us-west-2.redshift.amazonaws.com" to address: nodename nor servname provided, or not known
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/trevorransom/Documents/01 Coding/03 Data Engineering/Udacity/05 Airflow/plugins/operators/stage_redshift.py", line 54, in execute
+    redshift.run('DELETE FROM {}'.format(self.table))
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/dbapi_hook.py", line 164, in run
+    with closing(self.get_conn()) as conn:
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/postgres_hook.py", line 93, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/usr/local/lib/python3.9/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "redshift-cluster-airflow.ca3iipyjqhur.us-west-2.redshift.amazonaws.com" to address: nodename nor servname provided, or not known
+
+[2021-02-04 15:08:28,335] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=udac_example_dag, task_id=Stage_events, execution_date=20190113T150000, start_date=20210204T130828, end_date=20210204T130828
+[2021-02-04 15:08:33,191] {local_task_job.py:102} INFO - Task exited with return code 1
