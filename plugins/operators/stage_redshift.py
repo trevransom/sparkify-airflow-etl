@@ -46,8 +46,6 @@ class StageToRedshiftOperator(BaseOperator):
         self.json = json
         self.region = region
         self.compupdate = compupdate
-        #self.delimiter = delimiter
-        # self.ignore_headers = ignore_headers
         self.aws_credentials_id = aws_credentials_id
 
     def execute(self, context):
