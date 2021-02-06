@@ -17,6 +17,6 @@ class LoadDimensionOperator(BaseOperator):
         # Map params here
         # Example:
         # self.conn_id = conn_id
-
+        # in this one we should make both origina and desitination tables as parameters
     def execute(self, context):
         self.log.info('LoadDimensionOperator not implemented yet')
