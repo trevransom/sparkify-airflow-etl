@@ -9,7 +9,7 @@ class DataQualityOperator(BaseOperator):
     @apply_defaults
     def __init__(self,
                 redshift_conn_id="",
-                expected_null_result="",
+                dq_checks="",
                 target_column="",
                 destination_table="",
                 *args, **kwargs):
@@ -22,13 +22,16 @@ class DataQualityOperator(BaseOperator):
 
     def execute(self, context):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
-        self.log.info(f'Checking data from destination Redshift table: {self.destination_table}')
-        results = redshift.get_records(f'SELECT COUNT(*) FROM {self.destination_table} WHERE {self.target_column} is null')[0][0]
-        self.log.info(f'Results: {results}')
-        
-        if results != self.expected_null_result:
-            self.log.info(f'Expected result was: {type(self.expected_null_result)}. We got: {type(results)}')
-            raise ValueError("Data quality check failed")
 
-        else:
-            self.log.info("Data quality check was successful! No null values")
+        for sql_check in self.dq_checks:
+            check = sql_check['check_sql']
+            expected_result = sql_check['expected_result']
+            results = redshift.get_records(sql_check)[0][0]
+            self.log.info(f'Results: {results}')
+            
+            if results != expected_result:
+                self.log.info(f'Expected result was: {self.expected_result}. We got: {results}')
+                raise ValueError("Data quality check failed")
+
+            else:
+                self.log.info("Data quality check was successful! No null values")

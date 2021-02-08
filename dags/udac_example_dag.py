@@ -43,7 +43,6 @@ stage_events_to_redshift = StageToRedshiftOperator(
     s3_key="log_data/2018/11/2018-11-01-events.json",
     table="staging_events",
     json="s3://udacity-dend/log_json_path.json",
-
 )
 
 stage_songs_to_redshift = StageToRedshiftOperator(
@@ -105,9 +104,10 @@ run_quality_checks = DataQualityOperator(
     task_id='Run_data_quality_checks',
     dag=dag,
     redshift_conn_id="redshift",
-    expected_null_result=0,
-    target_column="start_time",
-    destination_table="songplays",
+    dq_checks=[
+        {'check_sql': 'SELECT COUNT(*) FROM songplays WHERE start_time is null', 'expected_result': 0},
+        {'check_sql': 'SELECT COUNT(*) FROM users WHERE userid is null', 'expected_result': 0}
+    ]
 )
 
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
