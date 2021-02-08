@@ -10,15 +10,11 @@ class DataQualityOperator(BaseOperator):
     def __init__(self,
                 redshift_conn_id="",
                 dq_checks="",
-                target_column="",
-                destination_table="",
                 *args, **kwargs):
 
         super(DataQualityOperator, self).__init__(*args, **kwargs)
         self.redshift_conn_id = redshift_conn_id
-        self.destination_table = destination_table
-        self.expected_null_result = expected_null_result
-        self.target_column = target_column
+        self.dq_checks = dq_checks
 
     def execute(self, context):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
