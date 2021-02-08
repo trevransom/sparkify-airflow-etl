@@ -27,15 +27,12 @@ dag = DAG(
     max_active_runs=1
 )
 
-start_operator = DummyOperator(task_id='Begin_execution',  dag=dag)
-
-create_tables = PostgresOperator(
-    task_id='Create_tables',
-    dag=dag,
+start_operator = PostgresOperator(
+    task_id='Begin_execution',  
+    dag=dag, 
     postgres_conn_id="redshift",
     sql="sql_create_tables.sql"
 )
-
 
 stage_events_to_redshift = StageToRedshiftOperator(
     task_id='Stage_events',
@@ -45,7 +42,8 @@ stage_events_to_redshift = StageToRedshiftOperator(
     s3_bucket="udacity-dend",
     s3_key="log_data/2018/11/2018-11-01-events.json",
     table="staging_events",
-    json="s3://udacity-dend/log_json_path.json"
+    json="s3://udacity-dend/log_json_path.json",
+
 )
 
 stage_songs_to_redshift = StageToRedshiftOperator(
@@ -114,4 +112,4 @@ run_quality_checks = DataQualityOperator(
 
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> create_tables >> [stage_events_to_redshift, stage_songs_to_redshift] >> load_songplays_table >> [load_user_dimension_table, load_song_dimension_table, load_artist_dimension_table, load_time_dimension_table] >> run_quality_checks >> end_operator
+start_operator >> [stage_events_to_redshift, stage_songs_to_redshift] >> load_songplays_table >> [load_user_dimension_table, load_song_dimension_table, load_artist_dimension_table, load_time_dimension_table] >> run_quality_checks >> end_operator
